@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Task Planner</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Daily Task Planner</h1>
+        <p>Keep track of your tasks and schedule for the day.</p>
+
+        <img src="CalAndCheckGraphic.png" alt="Calendar and a check mark representing completed daily tasks">
+
+        <nav>
+            <a href="#tasks">Tasks</a>
+            <a href="#add-task">Add a Task</a>
+            <a href="#schedule">Today's Schedule</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="tasks">
+            <h2>Today's Tasks</h2>
+            <p>Check what you need to complete today.</p>
+
+            <ul>
+                <li>
+                    <input type="checkbox" id="task1">
+                    <label for="task1">Finish class assignment</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="task2">
+                    <label for="task2">Go to the grocery store</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="task3">
+                    <label for="task3">Respond to emails</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="task4">
+                    <label for="task4">Prepare for tomorrow's classes</label>
+                </li>
+            </ul>
+        </section>
+
+        <section id="add-task">
+            <h2>Add a Task</h2>
+            <p>Enter a new task and choose when you want to complete it.</p>
+
+            <form>
+                <p>
+                    <label for="task-name">Task name:</label>
+                    <input type="text" id="task-name" name="task-name">
+                </p>
+
+                <p>
+                    <label for="due-date">Due date:</label>
+                    <input type="date" id="due-date" name="due-date">
+                </p>
+
+                <p>
+                    <label for="priority">Priority:</label>
+                    <select id="priority" name="priority">
+                        <option value="">Choose a priority</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </p>
+
+                <button type="submit">Add Task</button>
+            </form>
+        </section>
+
+        <section id="schedule">
+            <h2>Today's Schedule</h2>
+            <p>See what is coming up today.</p>
+
+            <h3>Morning</h3>
+            <ul>
+                <li><strong>9:00 AM:</strong> Class</li>
+                <li><strong>11:00 AM:</strong> Study</li>
+            </ul>
+
+            <h3>Afternoon</h3>
+            <ul>
+                <li><strong>1:00 PM:</strong> Lunch</li>
+                <li><strong>2:30 PM:</strong> Class</li>
+            </ul>
+
+            <h3>Evening</h3>
+            <ul>
+                <li><strong>6:00 PM:</strong> Dinner</li>
+                <li><strong>7:00 PM:</strong> Finish assignments</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Daily Task Planner</p>
+    </footer>
+
+</body>
+
+</html>
