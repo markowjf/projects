@@ -1,8 +1,8 @@
+
 body {
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    margin: 0;
     background-color: #f5f5f5;
     color: #333333;
 }
@@ -21,16 +21,19 @@ h1 {
 h2 {
     font-size: 26px;
     color: #244a73;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 h3 {
     font-size: 20px;
     color: #244a73;
+    margin-top: 15px;
 }
 
 header img {
     width: 150px;
+    max-width: 100%;
+    height: auto;
     margin: 15px;
 }
 
@@ -40,52 +43,54 @@ nav {
 
 nav a {
     color: #244a73;
-    margin: 10px;
     font-weight: bold;
 }
 
-main {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 0 20px;
+.nav-link {
+    color: #244a73;
 }
 
-section {
+.nav-link:hover {
+    color: #18334f;
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1000px;
+}
+
+.card {
     background-color: white;
-    padding: 20px;
-    margin-bottom: 25px;
     border: 1px solid #cccccc;
     border-radius: 8px;
+}
+
+.card-body {
+    padding: 20px;
 }
 
 ul {
     line-height: 1.8;
 }
 
-form p {
-    margin-bottom: 15px;
+.form-label {
+    font-weight: bold;
 }
 
-label {
-    margin-right: 8px;
-}
-
-input,
-select {
-    padding: 6px;
+.form-control,
+.form-select {
     font-size: 16px;
 }
 
-button {
+.btn-primary {
     background-color: #244a73;
-    color: white;
-    padding: 10px 15px;
-    border: none;
+    border-color: #244a73;
     font-size: 16px;
 }
 
-button:hover {
+.btn-primary:hover {
     background-color: #18334f;
+    border-color: #18334f;
 }
 
 footer {
@@ -93,4 +98,8 @@ footer {
     background-color: #dce8f5;
     padding: 15px;
     margin-top: 30px;
+}
+
+footer p {
+    margin-bottom: 0;
 }
