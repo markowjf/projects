@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A simple daily planner for tasks and schedules">
+    <meta name="author" content="Jess Markowitz">
+    <title>Daily Task Planner</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+
+
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1>Daily Task Planner</h1>
+        <p>Keep track of your tasks and schedule for the day.</p>
+
+        <img src="CalAndCheckGraphic.png" alt="Calendar and a check mark representing completed daily tasks">
+
+        <nav class="nav justify-content-center">
+            <a class="nav-link" href="#tasks">Tasks</a>
+            <a class="nav-link" href="#add-task">Add a Task</a>
+            <a class="nav-link" href="#schedule">Today's Schedule</a>
+        </nav>
+    </header>
+
+    <main class="container my-4">
+
+        <div class="row g-4">
+
+            <div class="col-md-6">
+                <section id="tasks" class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">Today's Tasks</h2>
+                        <p>Check what you need to complete today.</p>
+
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <input class="form-check-input me-2" type="checkbox" id="task1">
+                                <label for="task1">Finish class assignment</label>
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-2" type="checkbox" id="task2">
+                                <label for="task2">Go to the grocery store</label>
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-2" type="checkbox" id="task3">
+                                <label for="task3">Respond to emails</label>
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-2" type="checkbox" id="task4">
+                                <label for="task4">Prepare for tomorrow's classes</label>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <div class="col-md-6">
+                <section id="add-task" class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">Add a Task</h2>
+                        <p>Enter a new task and choose when you want to complete it.</p>
+
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label" for="task-name">Task name:</label>
+                                <input class="form-control" type="text" id="task-name" name="task-name">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label" for="due-date">Due date:</label>
+                                <input class="form-control" type="date" id="due-date" name="due-date">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label" for="priority">Priority:</label>
+                                <select class="form-select" id="priority" name="priority">
+                                    <option value="">Choose a priority</option>
+                                    <option value="high">High</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="low">Low</option>
+                                </select>
+                            </div>
+
+                            <button class="btn btn-primary" type="button">Add Task</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+
+            <div class="col-12">
+                <section id="schedule" class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Today's Schedule</h2>
+                        <p>See what is coming up today.</p>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h3>Morning</h3>
+                                <ul>
+                                    <li><strong>9:00 AM:</strong> Class</li>
+                                    <li><strong>11:00 AM:</strong> Study</li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-4">
+                                <h3>Afternoon</h3>
+                                <ul>
+                                    <li><strong>1:00 PM:</strong> Lunch</li>
+                                    <li><strong>2:30 PM:</strong> Class</li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-4">
+                                <h3>Evening</h3>
+                                <ul>
+                                    <li><strong>6:00 PM:</strong> Dinner</li>
+                                    <li><strong>7:00 PM:</strong> Finish assignments</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Daily Task Planner</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
