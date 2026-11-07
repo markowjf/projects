@@ -3,44 +3,59 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A simple daily planner for tasks and schedules">
-    <meta name="author" content="Jess Markowitz">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A daily planner for organizing tasks and schedules">
     <title>Daily Task Planner</title>
 
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
-
-
     <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
 
     <header>
-        <h1>Daily Task Planner</h1>
-        <p>Keep track of your tasks and schedule for the day.</p>
+        <nav class="navbar navbar-expand-md">
+            <div class="container">
+                <a class="navbar-brand" href="#">Daily Task Planner</a>
 
-        <img src="CalAndCheckGraphic.png" alt="Calendar and a check mark representing completed daily tasks">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <nav class="nav justify-content-center">
-            <a class="nav-link" href="#tasks">Tasks</a>
-            <a class="nav-link" href="#add-task">Add a Task</a>
-            <a class="nav-link" href="#schedule">Today's Schedule</a>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tasks">Tasks</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#add-task">Add a Task</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#schedule">Today's Schedule</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
+
+        <div class="header-content container">
+            <h1>Organize Your Day</h1>
+            <p>Keep track of your tasks and schedule for the day.</p>
+            <img class="d-none d-sm-block mx-auto" src="CalAndCheckGraphic.png" alt="Calendar and a check mark representing completed daily tasks">
+        </div>
     </header>
 
     <main class="container my-4">
 
         <div class="row g-4">
 
-            <div class="col-md-6">
+            <div class="col-12 col-lg-6">
                 <section id="tasks" class="card h-100">
                     <div class="card-body">
                         <h2 class="card-title">Today's Tasks</h2>
-                        <p>Check what you need to complete today.</p>
+                        <p class="section-description">Check what you need to complete today.</p>
 
                         <ul class="list-group">
                             <li class="list-group-item">
@@ -64,25 +79,25 @@
                 </section>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-12 col-lg-6">
                 <section id="add-task" class="card h-100">
                     <div class="card-body">
                         <h2 class="card-title">Add a Task</h2>
-                        <p>Enter a new task and choose when you want to complete it.</p>
+                        <p class="section-description">Enter a new task and choose when you want to complete it.</p>
 
                         <form>
                             <div class="mb-3">
-                                <label class="form-label" for="task-name">Task name:</label>
-                                <input class="form-control" type="text" id="task-name" name="task-name">
+                                <label class="form-label" for="task-name">Task name</label>
+                                <input class="form-control" type="text" id="task-name" name="task-name" placeholder="Enter a task">
                             </div>
 
                             <div class="mb-3">
-                                <label class="form-label" for="due-date">Due date:</label>
+                                <label class="form-label" for="due-date">Due date</label>
                                 <input class="form-control" type="date" id="due-date" name="due-date">
                             </div>
 
                             <div class="mb-3">
-                                <label class="form-label" for="priority">Priority:</label>
+                                <label class="form-label" for="priority">Priority</label>
                                 <select class="form-select" id="priority" name="priority">
                                     <option value="">Choose a priority</option>
                                     <option value="high">High</option>
@@ -101,31 +116,37 @@
                 <section id="schedule" class="card">
                     <div class="card-body">
                         <h2 class="card-title">Today's Schedule</h2>
-                        <p>See what is coming up today.</p>
+                        <p class="section-description">See what is coming up today.</p>
 
-                        <div class="row">
-                            <div class="col-md-4">
-                                <h3>Morning</h3>
-                                <ul>
-                                    <li><strong>9:00 AM:</strong> Class</li>
-                                    <li><strong>11:00 AM:</strong> Study</li>
-                                </ul>
+                        <div class="row g-3">
+                            <div class="col-12 col-md-4">
+                                <div class="schedule-box">
+                                    <h3>Morning</h3>
+                                    <ul>
+                                        <li><strong>9:00 AM:</strong> Class</li>
+                                        <li><strong>11:00 AM:</strong> Study</li>
+                                    </ul>
+                                </div>
                             </div>
 
-                            <div class="col-md-4">
-                                <h3>Afternoon</h3>
-                                <ul>
-                                    <li><strong>1:00 PM:</strong> Lunch</li>
-                                    <li><strong>2:30 PM:</strong> Class</li>
-                                </ul>
+                            <div class="col-12 col-md-4">
+                                <div class="schedule-box">
+                                    <h3>Afternoon</h3>
+                                    <ul>
+                                        <li><strong>1:00 PM:</strong> Lunch</li>
+                                        <li><strong>2:30 PM:</strong> Class</li>
+                                    </ul>
+                                </div>
                             </div>
 
-                            <div class="col-md-4">
-                                <h3>Evening</h3>
-                                <ul>
-                                    <li><strong>6:00 PM:</strong> Dinner</li>
-                                    <li><strong>7:00 PM:</strong> Finish assignments</li>
-                                </ul>
+                            <div class="col-12 col-md-4">
+                                <div class="schedule-box">
+                                    <h3>Evening</h3>
+                                    <ul>
+                                        <li><strong>6:00 PM:</strong> Dinner</li>
+                                        <li><strong>7:00 PM:</strong> Finish assignments</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
 
@@ -141,10 +162,15 @@
         <p>Daily Task Planner</p>
     </footer>
 
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
 
 </body>
 
 </html>
+
+<!--
+    AI Use Disclosure:
+    Tool: ChatGPT free
+    Purpose: Helped with Bootstrap responsive layout, mobile navigation, and CSS improvements.
+    Human Role: I reviewed the suggested design, kept my original planner content and colors, and tested the layout.
+    -->

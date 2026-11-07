@@ -1,53 +1,41 @@
 
+/* Daily Task Planner Styles */
+
 body {
     font-family: Arial, sans-serif;
     font-size: 16px;
-    line-height: 1.5;
-    background-color: #f5f5f5;
+    line-height: 1.6;
+    background-color: #f5f7fa;
     color: #333333;
+    margin: 0;
 }
+
+/* Header and Navigation */
 
 header {
-    text-align: center;
     background-color: #dce8f5;
-    padding: 30px;
 }
 
-h1 {
-    font-size: 36px;
-    margin-bottom: 5px;
+.navbar {
+    background-color: #dce8f5;
+    padding: 15px 0;
+    border-bottom: 1px solid #c5d5e5;
 }
 
-h2 {
-    font-size: 26px;
+.navbar-brand {
     color: #244a73;
-    margin-bottom: 10px;
-}
-
-h3 {
-    font-size: 20px;
-    color: #244a73;
-    margin-top: 15px;
-}
-
-header img {
-    width: 150px;
-    max-width: 100%;
-    height: auto;
-    margin: 15px;
-}
-
-nav {
-    margin-top: 15px;
-}
-
-nav a {
-    color: #244a73;
+    font-size: 22px;
     font-weight: bold;
+}
+
+.navbar-brand:hover {
+    color: #18334f;
 }
 
 .nav-link {
     color: #244a73;
+    font-weight: bold;
+    margin-left: 10px;
 }
 
 .nav-link:hover {
@@ -55,37 +43,111 @@ nav a {
     text-decoration: underline;
 }
 
+.header-content {
+    text-align: center;
+    padding: 35px 20px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #244a73;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.header-content p {
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.header-content img {
+    width: 130px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Main Content */
+
 main {
-    max-width: 1000px;
+    max-width: 1100px;
 }
 
 .card {
     background-color: white;
-    border: 1px solid #cccccc;
-    border-radius: 8px;
+    border: 1px solid #d4dce5;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
 
 .card-body {
-    padding: 20px;
+    padding: 25px;
 }
 
-ul {
-    line-height: 1.8;
+h2 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #244a73;
+    margin-bottom: 10px;
 }
+
+h3 {
+    font-size: 20px;
+    color: #244a73;
+    font-weight: bold;
+}
+
+.section-description {
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+/* Tasks */
+
+.list-group-item {
+    padding: 14px;
+    border-color: #dddddd;
+}
+
+.form-check-input {
+    border-color: #667788;
+    cursor: pointer;
+}
+
+.form-check-input:checked {
+    background-color: #244a73;
+    border-color: #244a73;
+}
+
+.list-group-item label {
+    cursor: pointer;
+}
+
+/* Add Task Form */
 
 .form-label {
     font-weight: bold;
+    color: #333333;
 }
 
 .form-control,
 .form-select {
     font-size: 16px;
+    padding: 10px;
+    border-color: #aebdcb;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #244a73;
+    box-shadow: 0 0 0 3px rgba(36, 74, 115, 0.15);
 }
 
 .btn-primary {
     background-color: #244a73;
     border-color: #244a73;
+    padding: 10px 20px;
     font-size: 16px;
+    font-weight: bold;
 }
 
 .btn-primary:hover {
@@ -93,13 +155,71 @@ ul {
     border-color: #18334f;
 }
 
+/* Schedule */
+
+.schedule-box {
+    background-color: #f2f6fb;
+    padding: 18px;
+    border-radius: 8px;
+    height: 100%;
+}
+
+.schedule-box ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.schedule-box li {
+    margin-bottom: 8px;
+}
+
+/* Footer */
+
 footer {
     text-align: center;
     background-color: #dce8f5;
-    padding: 15px;
+    padding: 20px;
     margin-top: 30px;
+    color: #244a73;
 }
 
 footer p {
     margin-bottom: 0;
+}
+
+/* Mobile Screen Adjustments */
+
+@media (max-width: 767px) {
+    .header-content {
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .header-content p {
+        font-size: 16px;
+    }
+
+    .card-body {
+        padding: 18px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .btn-primary {
+        width: 100%;
+    }
+
+    .schedule-box {
+        padding: 15px;
+    }
 }
